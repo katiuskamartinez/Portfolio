@@ -1,0 +1,321 @@
+:root{
+  --main-fon: 'Raleway', sans-serif; 
+  --font-size: 16px; 
+  --main-color:#47667A;
+  --second-color:#222;
+  --main-modal-color:rgba(71, 102, 122,0.85);
+  --secon-modal-color:rgba(34,34,34,0.85);
+  --third-color: rgb(205,212, 216);;
+  --container-width:1400px;
+}
+html{
+  box-sizing: border-box;
+  font-family: var(--main-fon);
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+ *::before,
+ *::after{
+  box-sizing: inherit;
+}
+.body{
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; 
+}
+ /*//////////////para el menu de hamburgesa*/
+.header{
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+  background-color: var(--main-color);
+  color: var(--second-color);
+  max-width: var(--container-width);
+  z-index: 1;
+  transition: top 0.4s ease-out;
+}
+.header h1{
+  margin: 0 auto;
+  text-align: center;
+  text-shadow: 0 2px 2px rgba(0,0,0.2), 0 2px 2px rgba(0,0,0.3);
+}
+/*////////barra de scroll///*/
+.progreso{
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 6px;
+  background: #fff;
+}
+.barra{
+  height: 6px;
+  background: var(--second-color);
+  width: 0%;
+  z-index: 2;
+}
+.section{
+  padding: 2rem;
+  padding-top: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100vh;
+  text-align: center;
+}
+.section h1{
+  text-shadow: 0 2px 2px rgba(0,0,0.2), 0 2px 2px rgba(0,0,0.3);
+}
+.panel{
+  position: fixed;
+  z-index: 998;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: var(--secon-modal-color);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.3s ease,opacity 0.5s ease;
+     /*de arriba*/
+    /* transform:translate(0,-100%) ;*/
+     /*de abajo*/
+  transform: translate(0,100%);
+     /*de la derecha*/
+     /*transform: translate(100%,0);*/
+     /* de la izquierda*/
+     /*transform: translate(-100%,0);*/
+}
+.panel.is-active{
+  transform: translate(0,0);
+  opacity: 1;
+  visibility: visible;
+}
+.hamburger{
+  position: fixed;
+  z-index: 999;
+  bottom: 1vh;
+  right: 1vw;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--main-color);
+}
+.hamburger span{
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background-color: var(--secon-modal-color);
+  transition: all 0.3s;
+}
+.hamburger span:first-child{transform: translateY(8px);}
+.hamburger span:last-child{transform: translateY(-8px);}
+.hamburger:hover{
+  background-color: var(--main-modal-color);
+}
+.menu{
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.menu a{
+  padding: 2rem;
+  width: inherit;
+  display: block;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--main-color);
+  transition: all 0.3s ease;
+}
+.menu a:hover{
+  font-weight: bold;
+  color: var(--second-color);
+  background-color: var(--main-modal-color);
+}
+.seccionbg{
+  z-index: 2;
+  background-color: var(--third-color);
+  clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+  }
+/*/////////seccion inicio///////*/
+.sociales{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 8%;
+}
+.fa-linkedin{
+  color: #007785;
+  font-size: 3rem;
+}
+.fa-linkedin:hover{
+  color: var(--main-modal-color);
+}
+.fa-github{
+  color: #181717;
+  background-color: #fff;
+  border-radius: 50%;
+  font-size: 3rem;
+  outline: 0;
+}
+.fa-github:hover{
+  color: var(--main-modal-color);
+}
+.fa-envelope{
+  font-size: 3rem;
+  color: var(--main-color);
+}
+.fa-envelope:hover{
+  color: var(--secon-modal-color);
+}
+.figma{
+  background-color:#F24E1E ;
+  width: 3rem;
+}
+.html{
+  background: #E34F26;
+  width: 3rem;
+}
+.css{
+  background-color: #1572B6 ;
+  width: 3rem;
+}
+.js{
+  background-color:#F7DF1E ;
+  width: 3rem;
+}
+.react{
+  background-color:#61DAFB ;
+  width: 3rem;
+}
+.git{
+  background-color:#F05032;
+  width: 3rem;
+}
+.dev{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.dev img{
+  max-width: 100%;
+}
+.flecha span{
+  font-size: 2rem;
+  animation-name: flecha;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  position: relative;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  box-shadow: 0px 0px 5px 5px var(--main-color);
+}
+@keyframes flecha{
+  0% {background: var(--main-modal-color); top:0}
+  25% {background: #fff;bottom: 2px;}
+  50% {background: var(--main-modal-color); bottom: 4px;}
+  75% {background: #fff; top: 2px;}
+  100% {background: var(--main-modal-color);bottom: 3px;}
+}
+/*///////////////////sección perfil////*/
+.img-texto{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.avatar{
+  z-index: 1;
+  width: 100%;
+  border-radius: 15px;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+.parrafo{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.parrafo p{
+  text-align: center;
+  word-spacing: normal;
+  font-weight: 200; 
+  margin: auto;
+}
+.contacto-herramientas{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.herramientas{
+  display: flex;
+  flex-direction: column;
+}
+.lista{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style-position: inside;
+  list-style: none ;
+  margin: 5px 0;
+  padding: 0;
+}
+.lista li{
+  margin: 3px;
+}
+.btn-g{
+  background: var(--third-color);
+  border-radius: 3px;
+  border-width: thin;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  overflow: hidden;
+  border-color: var(--main-modal-color);
+  color: var(--secon-modal-color);
+  transition: all 500ms ease;
+  padding: 5px;
+  margin-bottom: 2px;
+}
+.btn-g:hover{
+  background-color: var(--secon-modal-color);
+  color: var(--third-color);
+}
+/*////////////sección proyectos/////*/
+.proyectos{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 15px;
+}
+.item{
+  margin: 8px 2px;
+  padding-bottom: 3px;
+  box-shadow: 3px 3px 6px;
+}
+.item img{
+ width: 200px;
+}
+@media screen and (max-width:550px){
+  .figma, .html, .css, .js, .react, .git, .fa-linkedin, .fa-github{
+    width: 2rem;
+  }
+  .seccionbg{
+    background-color: var(--third-color);
+    clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .hamburger{
+    width: 2rem;
+    height: 2rem;
+  }
+  .hamburger span{
+    width: 15px;
+  }
+}
+ 
