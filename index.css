@@ -1,9 +1,9 @@
 :root{
   --main-fon: 'Raleway', sans-serif; 
   --font-size: 16px; 
-  --main-color:#47667A;
+  --main-color:#336980;
   --second-color:#222;
-  --main-modal-color:rgba(71, 102, 122,0.85);
+  --main-modal-color:rgba(51, 105, 128, 0.85);
   --secon-modal-color:rgba(34,34,34,0.85);
   --third-color: rgb(205,212, 216);;
   --container-width:1400px;
@@ -58,7 +58,6 @@ html{
   padding-top: 4rem;
   margin-left: auto;
   margin-right: auto;
-  min-height: 100vh;
   text-align: center;
 }
 .section h1{
@@ -130,7 +129,7 @@ html{
   display: block;
   font-size: 1.5rem;
   text-decoration: none;
-  color: var(--main-color);
+  color: var(--main-modal-color);
   transition: all 0.3s ease;
 }
 .menu a:hover{
@@ -149,6 +148,11 @@ html{
   justify-content: space-evenly;
   margin-top: 8%;
 }
+.gmail{
+  background: #a87871;
+  width: 3rem;
+  height: 2.5rem;
+}
 .fa-linkedin{
   color: #007785;
   font-size: 3rem;
@@ -158,20 +162,12 @@ html{
 }
 .fa-github{
   color: #181717;
-  background-color: #fff;
   border-radius: 50%;
   font-size: 3rem;
   outline: 0;
 }
 .fa-github:hover{
   color: var(--main-modal-color);
-}
-.fa-envelope{
-  font-size: 3rem;
-  color: var(--main-color);
-}
-.fa-envelope:hover{
-  color: var(--secon-modal-color);
 }
 .figma{
   background-color:#F24E1E ;
@@ -217,16 +213,17 @@ html{
   box-shadow: 0px 0px 5px 5px var(--main-color);
 }
 @keyframes flecha{
-  0% {background: var(--main-modal-color); top:0}
+  0% {background: var(--main-color); top:0}
   25% {background: #fff;bottom: 2px;}
-  50% {background: var(--main-modal-color); bottom: 4px;}
+  50% {background: var(--main-color); bottom: 4px;}
   75% {background: #fff; top: 2px;}
-  100% {background: var(--main-modal-color);bottom: 3px;}
+  100% {background: var(--main-color);bottom: 3px;}
 }
 /*///////////////////sección perfil////*/
 .img-texto{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 .avatar{
@@ -251,6 +248,7 @@ html{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  margin-bottom: 10px;
 }
 .herramientas{
   display: flex;
