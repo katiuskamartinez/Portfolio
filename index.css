@@ -1,11 +1,11 @@
 :root{
   --main-fon: 'Raleway', sans-serif; 
   --font-size: 16px; 
-  --main-color:#336980;
+  --main-color:#d1b0d3;
   --second-color:#222;
-  --main-modal-color:rgba(51, 105, 128, 0.85);
+  --main-modal-color:#d59bf6;
   --secon-modal-color:rgba(34,34,34,0.85);
-  --third-color: rgb(205,212, 216);;
+  --third-color:#8ef6e4;
   --container-width:1400px;
 }
 html{
@@ -101,7 +101,7 @@ html{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: var(--main-color);
+  background-color: var(--main-modal-color);
 }
 .hamburger span{
   position: absolute;
@@ -113,7 +113,7 @@ html{
 .hamburger span:first-child{transform: translateY(8px);}
 .hamburger span:last-child{transform: translateY(-8px);}
 .hamburger:hover{
-  background-color: var(--main-modal-color);
+  background-color: var(--main-color);
 }
 .menu{
   width: inherit;
@@ -267,22 +267,21 @@ html{
   margin: 3px;
 }
 .btn-g{
-  background: var(--third-color);
   border-radius: 3px;
   border-width: thin;
   font-size: 16px;
   font-weight: 500;
   text-decoration: none;
   overflow: hidden;
-  border-color: var(--main-modal-color);
+  border-color: var(--third-color);
   color: var(--secon-modal-color);
   transition: all 500ms ease;
   padding: 5px;
   margin-bottom: 2px;
 }
 .btn-g:hover{
-  background-color: var(--secon-modal-color);
-  color: var(--third-color);
+  background-color: var(--main-modal-color);
+  color: var(--second-color);
 }
 /*////////////sección proyectos/////*/
 .proyectos{
