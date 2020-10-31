@@ -61,7 +61,7 @@ html{
   text-align: center;
 }
 .section h1{
-  text-shadow: 0 2px 2px rgba(0,0,0.2), 0 2px 2px rgba(0,0,0.3);
+  text-shadow: 0 1px 1px rgba(0,0,0.2), 0 1px 1px rgba(0,0,0.2);
 }
 .panel{
   position: fixed;
@@ -153,6 +153,9 @@ html{
   width: 3rem;
   height: 2.5rem;
 }
+.gmail:hover{
+  background: var(--main-color);
+}
 .fa-linkedin{
   color: #007785;
   font-size: 3rem;
@@ -198,11 +201,16 @@ html{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 15px;
 }
 .dev img{
   max-width: 100%;
 }
-.flecha span{
+.flecha a{
+  margin: auto;
+  text-decoration: none;
+  background: var(--main-color);
+  width: 30px;
   font-size: 2rem;
   animation-name: flecha;
   animation-duration: 5s;
@@ -242,6 +250,7 @@ html{
   word-spacing: normal;
   font-weight: 200; 
   margin: auto;
+  font-size: 18px;
 }
 .contacto-herramientas{
   display: flex;
@@ -266,6 +275,9 @@ html{
 .lista li{
   margin: 3px;
 }
+.logos{
+  margin-top: 15px;
+}
 .btn-g{
   border-radius: 3px;
   border-width: thin;
@@ -275,13 +287,14 @@ html{
   overflow: hidden;
   border-color: var(--third-color);
   color: var(--secon-modal-color);
+  background: var(--main-modal-color);
   transition: all 500ms ease;
   padding: 5px;
   margin-bottom: 2px;
 }
 .btn-g:hover{
-  background-color: var(--main-modal-color);
-  color: var(--second-color);
+  background-color: var(--main-color);
+  color: #fff;
 }
 /*////////////sección proyectos/////*/
 .proyectos{
@@ -292,12 +305,28 @@ html{
   margin-top: 15px;
 }
 .item{
+  background: #cffffe;
   margin: 8px 2px;
   padding-bottom: 3px;
   box-shadow: 3px 3px 6px;
 }
 .item img{
  width: 200px;
+}
+.animado{
+  opacity: 0;
+  transition: all 0.5s;
+}
+.mostrarArriba{
+  animation: mostrarArriba 1s;
+}
+@keyframes mostrarArriba{
+  0%{
+    transform: translateY(80px);
+  }
+  100%{
+    transform: translateY(0);
+  }
 }
 @media screen and (max-width:550px){
   .figma, .html, .css, .js, .react, .git, .fa-linkedin, .fa-github{
