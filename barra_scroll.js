@@ -25,7 +25,7 @@ export default function barraScroll(){
     function mostrarLogos(){
         let desplazar=document.documentElement.scrollTop;
         let height=$logos.offsetTop;
-        if(height - 400 < desplazar){
+        if(height - 350 < desplazar){
             $logos.style.opacity=1;
             $logos.classList.add("mostrarArriba"); 
         }
