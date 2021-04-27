@@ -1,30 +1,30 @@
-:root{
-  --main-fon: 'Raleway', sans-serif; 
-  --font-size: 16px; 
-  --main-color:#d1b0d3;
-  --second-color:#222;
-  --main-modal-color:#d59bf6;
-  --secon-modal-color:rgba(34,34,34,0.85);
-  --third-color:#8ef6e4;
-  --container-width:1400px;
+:root {
+  --main-fon: "Raleway", sans-serif;
+  --font-size: 16px;
+  --main-color: #d1b0d3;
+  --second-color: #222;
+  --main-modal-color: #d59bf6;
+  --secon-modal-color: rgba(34, 34, 34, 0.85);
+  --third-color: #8ef6e4;
+  --container-width: 1400px;
 }
-html{
+html {
   box-sizing: border-box;
   font-family: var(--main-fon);
   font-size: var(--font-size);
   scroll-behavior: smooth;
 }
- *::before,
- *::after{
+*::before,
+*::after {
   box-sizing: inherit;
 }
-.body{
+.body {
   margin: 0px;
   padding: 0px;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
- /*//////////////para el menu de hamburgesa*/
-.header{
+/*//////////////para el menu de hamburgesa*/
+.header {
   position: sticky;
   top: 0;
   padding: 1rem;
@@ -34,36 +34,36 @@ html{
   z-index: 1;
   transition: top 0.4s ease-out;
 }
-.header h1{
+.header h1 {
   margin: 0 auto;
   text-align: center;
-  text-shadow: 0 2px 2px rgba(0,0,0.2), 0 2px 2px rgba(0,0,0.3);
+  text-shadow: 0 2px 2px rgba(0, 0, 0.2), 0 2px 2px rgba(0, 0, 0.3);
 }
 /*////////barra de scroll///*/
-.progreso{
+.progreso {
   position: fixed;
   z-index: 1;
   width: 100%;
   height: 6px;
   background: #fff;
 }
-.barra{
+.barra {
   height: 6px;
   background: var(--second-color);
   width: 0%;
   z-index: 2;
 }
-.section{
+.section {
   padding: 2rem;
   padding-top: 4rem;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
-.section h1{
-  text-shadow: 0 1px 1px rgba(0,0,0.2), 0 1px 1px rgba(0,0,0.2);
+.section h1 {
+  text-shadow: 0 1px 1px rgba(0, 0, 0.2), 0 1px 1px rgba(0, 0, 0.2);
 }
-.panel{
+.panel {
   position: fixed;
   z-index: 998;
   top: 0;
@@ -74,22 +74,22 @@ html{
   background-color: var(--secon-modal-color);
   opacity: 0;
   visibility: hidden;
-  transition: transform 0.3s ease,opacity 0.5s ease;
-     /*de arriba*/
-    /* transform:translate(0,-100%) ;*/
-     /*de abajo*/
-  transform: translate(0,100%);
-     /*de la derecha*/
-     /*transform: translate(100%,0);*/
-     /* de la izquierda*/
-     /*transform: translate(-100%,0);*/
+  transition: transform 0.3s ease, opacity 0.5s ease;
+  /*de arriba*/
+  /* transform:translate(0,-100%) ;*/
+  /*de abajo*/
+  transform: translate(0, 100%);
+  /*de la derecha*/
+  /*transform: translate(100%,0);*/
+  /* de la izquierda*/
+  /*transform: translate(-100%,0);*/
 }
-.panel.is-active{
-  transform: translate(0,0);
+.panel.is-active {
+  transform: translate(0, 0);
   opacity: 1;
   visibility: visible;
 }
-.hamburger{
+.hamburger {
   position: fixed;
   z-index: 999;
   bottom: 1vh;
@@ -103,19 +103,23 @@ html{
   align-items: center;
   background-color: var(--main-modal-color);
 }
-.hamburger span{
+.hamburger span {
   position: absolute;
   width: 25px;
   height: 2px;
   background-color: var(--secon-modal-color);
   transition: all 0.3s;
 }
-.hamburger span:first-child{transform: translateY(8px);}
-.hamburger span:last-child{transform: translateY(-8px);}
-.hamburger:hover{
+.hamburger span:first-child {
+  transform: translateY(8px);
+}
+.hamburger span:last-child {
+  transform: translateY(-8px);
+}
+.hamburger:hover {
   background-color: var(--main-color);
 }
-.menu{
+.menu {
   width: inherit;
   display: flex;
   flex-direction: column;
@@ -123,7 +127,7 @@ html{
   align-items: center;
   text-align: center;
 }
-.menu a{
+.menu a {
   padding: 2rem;
   width: inherit;
   display: block;
@@ -132,81 +136,81 @@ html{
   color: var(--main-modal-color);
   transition: all 0.3s ease;
 }
-.menu a:hover{
+.menu a:hover {
   font-weight: bold;
   color: var(--second-color);
   background-color: var(--main-modal-color);
 }
-.seccionbg{
+.seccionbg {
   z-index: 2;
   background-color: var(--third-color);
   clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
-  }
+}
 /*/////////seccion inicio///////*/
-.sociales{
+.sociales {
   display: flex;
   justify-content: space-evenly;
   margin-top: 5px;
 }
-.gmail{
+.gmail {
   background: #a87871;
   width: 3rem;
   height: 2.5rem;
 }
-.gmail:hover{
+.gmail:hover {
   background: var(--main-color);
 }
-.fa-linkedin{
+.fa-linkedin {
   color: #007785;
   font-size: 3rem;
 }
-.fa-linkedin:hover{
+.fa-linkedin:hover {
   color: var(--main-modal-color);
 }
-.fa-github{
+.fa-github {
   color: #181717;
   border-radius: 50%;
   font-size: 3rem;
   outline: 0;
 }
-.fa-github:hover{
+.fa-github:hover {
   color: var(--main-modal-color);
 }
-.figma{
-  background-color:#F24E1E ;
+.figma {
+  background-color: #f24e1e;
   width: 3rem;
 }
-.html{
-  background: #E34F26;
+.html {
+  background: #e34f26;
   width: 3rem;
 }
-.css{
-  background-color: #1572B6 ;
+.css {
+  background-color: #1572b6;
   width: 3rem;
 }
-.js{
-  background-color:#F7DF1E ;
+.js {
+  background-color: #f7df1e;
   width: 3rem;
 }
-.react{
-  background-color:#61DAFB ;
+.react {
+  background-color: #61dafb;
   width: 3rem;
 }
-.git{
-  background-color:#F05032;
+.git {
+  background-color: #f05032;
   width: 3rem;
 }
-.dev{
+.dev {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 15px;
 }
-.dev img{
+.dev img {
   max-width: 100%;
 }
-.flecha a{
+.flecha a {
   margin: auto;
   text-decoration: none;
   background: var(--main-color);
@@ -220,65 +224,80 @@ html{
   animation-iteration-count: infinite;
   box-shadow: 0px 0px 5px 5px var(--main-color);
 }
-@keyframes flecha{
-  0% {background: var(--main-color); top:0}
-  25% {background: #fff;bottom: 2px;}
-  50% {background: var(--main-color); bottom: 4px;}
-  75% {background: #fff; top: 2px;}
-  100% {background: var(--main-color);bottom: 3px;}
+@keyframes flecha {
+  0% {
+    background: var(--main-color);
+    top: 0;
+  }
+  25% {
+    background: #fff;
+    bottom: 2px;
+  }
+  50% {
+    background: var(--main-color);
+    bottom: 4px;
+  }
+  75% {
+    background: #fff;
+    top: 2px;
+  }
+  100% {
+    background: var(--main-color);
+    bottom: 3px;
+  }
 }
 /*///////////////////sección perfil////*/
-.img-texto{
+.img-texto {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-.avatar{
+.avatar {
   z-index: 1;
   width: 100%;
   border-radius: 15px;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
-.parrafo{
+.parrafo {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.parrafo p{
+.parrafo p {
   text-align: center;
   word-spacing: normal;
-  font-weight: 200; 
+  font-weight: 200;
   margin: auto;
   font-size: 18px;
 }
-.contacto-herramientas{
+.contacto-herramientas {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-bottom: 10px;
 }
-.herramientas{
+.herramientas {
   display: flex;
   flex-direction: column;
 }
-.lista{
+.lista {
   display: flex;
   flex-direction: column;
   justify-content: center;
   list-style-position: inside;
-  list-style: none ;
+  list-style: none;
   margin: 5px 0;
   padding: 0;
 }
-.lista li{
+.lista li {
   margin: 3px;
 }
-.logos{
+.logos {
   margin-top: 15px;
 }
-.btn-g{
+.btn-g {
   border-radius: 3px;
   border-width: thin;
   font-size: 16px;
@@ -292,56 +311,62 @@ html{
   padding: 5px;
   margin-bottom: 2px;
 }
-.btn-g:hover{
+.btn-g:hover {
   background-color: var(--main-color);
   color: #fff;
 }
 /*////////////sección proyectos/////*/
-.proyectos{
+.proyectos {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly;
   margin-top: 15px;
 }
-.item{
+.item {
   background: #cffffe;
   margin: 8px 2px;
   padding-bottom: 3px;
   box-shadow: 3px 3px 6px;
 }
-.item img{
- width: 200px;
+.item img {
+  width: 200px;
 }
-.animado{
+.animado {
   opacity: 0;
   transition: all 0.5s;
 }
-.mostrarArriba{
+.mostrarArriba {
   animation: mostrarArriba 1s;
 }
-@keyframes mostrarArriba{
-  0%{
+@keyframes mostrarArriba {
+  0% {
     transform: translateY(80px);
   }
-  100%{
+  100% {
     transform: translateY(0);
   }
 }
-@media screen and (max-width:550px){
-  .figma, .html, .css, .js, .react, .git, .fa-linkedin, .fa-github{
+@media screen and (max-width: 550px) {
+  .figma,
+  .html,
+  .css,
+  .js,
+  .react,
+  .git,
+  .fa-linkedin,
+  .fa-github {
     width: 2rem;
   }
-  .seccionbg{
+  .seccionbg {
     background-color: var(--third-color);
-    clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 3%, 100% 0%, 100% 100%, 0% 100%);
   }
-  .hamburger{
+  .hamburger {
     width: 2rem;
     height: 2rem;
   }
-  .hamburger span{
+  .hamburger span {
     width: 15px;
   }
 }
- 
