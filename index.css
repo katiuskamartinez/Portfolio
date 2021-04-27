@@ -325,6 +325,7 @@ html {
 }
 .item {
   background: #cffffe;
+  width: 300px;
   margin: 8px 2px;
   padding-bottom: 3px;
   box-shadow: 3px 3px 6px;
