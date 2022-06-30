@@ -35,9 +35,13 @@ html {
   transition: top 0.4s ease-out;
 }
 .header h1 {
+  color: #000000;
+  font-family: var(--main-fon);
+  font-size: 36px;
+  font-weight: 800;
+  font-style: normal;
   margin: 0 auto;
   text-align: center;
-  text-shadow: 0 2px 2px rgba(0, 0, 0.2), 0 2px 2px rgba(0, 0, 0.3);
 }
 /*////////barra de scroll///*/
 .progreso {
@@ -61,7 +65,26 @@ html {
   text-align: center;
 }
 .section h1 {
-  text-shadow: 0 1px 1px rgba(0, 0, 0.2), 0 1px 1px rgba(0, 0, 0.2);
+  color: #000000;
+  font-family: var(--main-fon);
+  font-size: 32px;
+  font-weight: 800;
+  font-style: normal;
+  margin: 0 auto;
+  text-align: center;
+}
+section h2 {
+  color: #000000;
+  font-family: var(--main-fon);
+  font-size: 32px;
+  font-weight: 600;
+  font-style: normal;
+}
+.section h3 {
+  color: #000000;
+  font-family: var(--main-fon);
+  font-size: 28px;
+  font-weight: 500;
 }
 .panel {
   position: fixed;
@@ -144,7 +167,7 @@ html {
 .seccionbg {
   z-index: 2;
   background-color: var(--third-color);
-  clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 2.5%, 100% 0%, 100% 100%, 0% 100%);
 }
 /*/////////seccion inicio///////*/
 .sociales {
@@ -224,6 +247,10 @@ html {
   animation-iteration-count: infinite;
   box-shadow: 0px 0px 5px 5px var(--main-color);
 }
+.flecha svg {
+  width: 30px;
+  height: 30px;
+}
 @keyframes flecha {
   0% {
     background: var(--main-color);
@@ -265,11 +292,14 @@ html {
   justify-content: center;
 }
 .parrafo p {
+  color: #000000;
+  font-family: var(--main-fon);
   text-align: center;
   word-spacing: normal;
   font-weight: 200;
   margin: auto;
-  font-size: 18px;
+  font-size: 20px;
+  font-style: normal;
 }
 .contacto-herramientas {
   display: flex;
@@ -293,6 +323,9 @@ html {
 }
 .lista li {
   margin: 3px;
+  font-family: var(--main-fon);
+  font-size: 20px;
+  font-weight: 200;
 }
 .logos {
   margin-top: 15px;
@@ -300,7 +333,9 @@ html {
 .btn-g {
   border-radius: 3px;
   border-width: thin;
-  font-size: 16px;
+  color: #000000;
+  font-family: var(--main-fon);
+  font-size: 18px;
   font-weight: 500;
   text-decoration: none;
   overflow: hidden;
@@ -308,7 +343,7 @@ html {
   color: var(--secon-modal-color);
   background: var(--main-modal-color);
   transition: all 500ms ease;
-  padding: 5px;
+  padding: 8px;
   margin-bottom: 2px;
 }
 .btn-g:hover {
@@ -328,7 +363,7 @@ html {
   width: 300px;
   margin: 8px 2px;
   padding-bottom: 3px;
-  box-shadow: 3px 3px 6px;
+  box-shadow: 2px 2px 6px;
 }
 .item img {
   width: 200px;
@@ -361,7 +396,7 @@ html {
   }
   .seccionbg {
     background-color: var(--third-color);
-    clip-path: polygon(0 3%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 2%, 100% 0%, 100% 100%, 0% 100%);
   }
   .hamburger {
     width: 2rem;
@@ -369,5 +404,10 @@ html {
   }
   .hamburger span {
     width: 15px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .seccionbg {
+    clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
   }
 }
