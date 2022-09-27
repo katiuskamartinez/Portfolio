@@ -199,6 +199,16 @@ section h2 {
 .fa-github:hover {
   color: var(--main-modal-color);
 }
+.fa-behance {
+  font-size: 2.5rem;
+  border-radius: 3px;
+  color: var(--third-color);
+  background: #000000;
+  padding: 1.5px;
+}
+.fa-behance:hover {
+  background: var(--main-modal-color);
+}
 .figma {
   background-color: #f24e1e;
   width: 3rem;
@@ -331,7 +341,7 @@ section h2 {
   margin-top: 15px;
 }
 .btn-g {
-  border-radius: 3px;
+  border-radius: 5px;
   border-width: thin;
   color: #000000;
   font-family: var(--main-fon);
@@ -363,7 +373,8 @@ section h2 {
   width: 300px;
   margin: 8px 2px;
   padding-bottom: 3px;
-  box-shadow: 2px 2px 6px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
 }
 .item img {
   width: 200px;
