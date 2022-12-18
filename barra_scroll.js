@@ -1,7 +1,7 @@
 export default function barraScroll() {
   window.addEventListener("scroll", (e) => {
     progreso();
-    mostrarFoto();
+    // mostrarFoto();
     mostrarLogos();
     mostrarProyectos();
   });
@@ -14,20 +14,21 @@ export default function barraScroll() {
     document.getElementsByClassName("barra")[0].style.width = progreso + "%";
   }
   let $animados = document.querySelectorAll(".animado");
-  let $foto = document.querySelector(".foto");
+  // let $foto = document.querySelector(".foto");
   let $logos = document.querySelector(".logos");
-  function mostrarFoto() {
+  /* function mostrarFoto() {
     let scroll = document.documentElement.scrollTop;
     let alto = $foto.offsetTop;
     if (alto - 300 < scroll) {
       $foto.style.opacity = 1;
       $foto.classList.add("mostrarArriba");
     }
-  }
+  } */
   function mostrarLogos() {
     let desplazar = document.documentElement.scrollTop;
     let height = $logos.offsetTop;
-    if (height - 350 < desplazar) {
+    console.log(height);
+    if (height - 250 < desplazar) {
       $logos.style.opacity = 1;
       $logos.classList.add("mostrarArriba");
     }
